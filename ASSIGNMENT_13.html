@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Alert Box by Rashi</p>
+
+<button onclick="myFunction()">CLICK HERE</button>
+
+<script>
+function myFunction() {
+  alert("CAUTION! VIRUS DETECTED! Trobleshoot as soon as possible.");
+}
+</script>
+<hr>
+<hr>
+
+<p>Create your own BTS official Butter Card by clicking on the button below.</p>
+
+<button onclick="myFunction1()">Try it</button>
+
+<script>
+function myFunction1() {
+  window.open("https://www.bts-butter.com/");
+}
+</script>
+<hr>
+<hr>
+
+<button onclick="myFunction2()">HERE!</button>
+
+<p id="RASHI"> Tell us your favorite rapper here.</p>
+
+<script>
+function myFunction2() {
+  var text;
+  var favRapper = prompt("Who's your favorite Rapper?", "Jhope!");
+  switch(favRapper) {
+    case "RM":
+      text = "Excellent choice! RM is our President of BTS.";
+      break;
+    case "SUGA":
+      text = "SUGA is so Tiny!";
+      break;
+    case "SEOKJIN":
+      text = "Ohh! he's WWH, you know!";
+      break;
+    default:
+      text = "ya! He's also okay...";
+  }
+  document.getElementById("RASHI").innerHTML = text;
+}
+</script>
+<hr>
+<hr>
+<p>By Rashi Dashore.</p>
+<p> Roll No. : IC-2K20-67 </p>
+Thankyou
+<hr>
+
+</body>
+</html>

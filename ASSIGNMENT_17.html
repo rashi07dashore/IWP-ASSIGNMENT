@@ -1,0 +1,64 @@
+<html>
+
+<head>
+<title>New Page 1</title>
+<script language="javascript" >
+    function emptyAdd()
+    {
+        if (document.forms['frm'].t1.value=='Type your Address here.') 
+        {
+            document.forms['frm'].t1.value='';
+        }
+    }
+    function addLostFocus()
+    {
+        if (document.forms['frm'].t1.value=='') 
+        {
+            document.forms['frm'].t1.value='Type your Address here.';
+        }
+    }
+    
+    function showInfo()
+    {
+        var msg;
+        msg='';
+        msg='<b>Name:</b>'+document.forms['frm'].txtName.value+'<br>';
+       
+	// msg='<b>Name:</b>'+document.getElementById('txtN').value+'<br>';
+
+        
+        msg=msg+'<br>'
+        msg=msg+'<b>and Password is :</b>'+document.forms['frm'].pwd.value+'<br>';
+        document.getElementById('d1').style.visibility='visible';
+        document.getElementById('d1').innerHTML=msg;
+    }
+</script>
+</head>
+
+<body>
+<form name="frm">
+<table border="1" width="100%">
+  <tr>
+    <td>Name</td>
+    <td><input type = "text" name="txtName" id="txtN" /></td>
+  </tr>
+  
+  <tr>
+        <td>Password</td>
+        <td><input type=password  name="pwd" ></td>
+  </tr> 
+  <tr>
+        <td><input type=button name="btnShow" value="Show Information" onclick="showInfo()" /> </td>
+        <td><input type=reset  name="btnReset" ></td>
+  </tr> 
+  
+</table>
+<div id="d1" style=" visibility:hidden ; border-right: powderblue; border-top: powderblue ; border-left: powderblue ; border-bottom: powderblue; background-color:rgb(194,248,182) "> </div>
+<hr>
+<p>By Rashi Dashore.</p>
+<p> Roll No. : IC-2K20-67 </p>
+Thankyou
+<hr>
+</body>
+
+</html>

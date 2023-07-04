@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>Assignment 21</title>
+</head>
+<body>
+<form method="post" name="hopeform">
+<label for="principal">Principal amount: </label>
+<input type="text" id="principal" name="principal"><br><br>
+<label for="rate">Rate of Interest:</label>
+<input type="rate" id="rate" name="rate"><br><br>
+<label for="time">Time in Years:</label>
+<input type="text" id="time" name="time"><br><br>
+<input type="button" value="calculate simple interest" onclick="simpleinterest()"><br><br>
+<input type="reset" value="clear"><br><br>
+</form>
+<p id="jin"></p>
+<p id="jimin"></p>
+<p id="suga"></p>
+<p id="result"></p>
+
+<script type="text/javascript">
+function simpleinterest()
+{
+var p,t,r,si;
+p= document.getElementById("principal").value;
+r= document.getElementById("rate").value;
+t= document.getElementById("time").value;
+si = parseInt((p*r*t)/100);
+document.getElementById('jin').innerHTML="principal amount ="+p;
+document.getElementById('jimin').innerHTML="rate of interest ="+r;
+document.getElementById('suga').innerHTML="time:"+t;
+document.getElementById('result').innerHTML="simple interest is "+si+" Rs.";
+}
+</script>
+<hr>
+<p>By Rashi Dashore.</p>
+<p> Roll No. : IC-2K20-67 </p>
+Thankyou
+<hr>
+</body>
+</html>

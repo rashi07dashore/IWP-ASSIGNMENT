@@ -1,0 +1,94 @@
+<html>
+
+<head>
+	<title>ASSIGNMENT 23 By Rashi Dashore</title>
+	<script language="javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style type="text/css">
+		#main
+		{
+			background-color:#006701;
+			width:300px;
+			border:1px solid black;
+			padding:5px;
+		}
+		.box
+		{
+			background-color:#ababab;
+			widht:100px;
+			border:1px solid black;
+			padding:5px;
+			display:none;
+			margin:10px;
+			border-radius:10px;
+			box-shadow:5px 5px 10px black;
+		}
+	
+	</style>
+	<script language="javascript">
+	var h,m,s,ms;
+	var t;
+	var divID=1;
+	
+	function start()
+	{
+		h=0;
+		m=0;
+		s=0;
+		ms=0;
+		//document.getElementById("btnStart").value="Reset Stopwatch";
+		startWatch();
+		
+	}
+	function startWatch()
+	{
+		
+		ms++;
+		if(ms>9)
+		{
+			s++;
+			ms=0;
+			if(s>59)
+			{
+				m++;
+				s=0;
+				if(m>59)
+				{
+					m=0;
+					h++;
+				}
+			}
+		}
+		document.getElementById("1").innerHTML="Time is "+h+":"+m+":"+s+":"+ms;
+		$("#1").show('slow');
+		t=setTimeout("startWatch()",100);	
+	}
+	
+	function stop()
+	{
+		clearTimeout(t);
+		document.getElementById("btnStart").value="Start Stopwatch";
+	}
+	
+	
+	</script>
+	
+</head>
+<body>
+<form>
+<input id="btnStart" type="Button" value="Start Stopwatch" onClick="start()">
+<input id="btnStop" type="Button" value="Stop Stopwatch" onClick="stop()">
+
+</form>
+<div id="main">
+	<div id="1" class = "box">
+	Time:
+	</div>
+</div>
+<hr>
+<p>Stopwatch by Rashi Dashore.</p>
+<p> Roll No. : IC-2K20-67 </p>
+Thankyou
+<hr>
+</body>
+
+</html>

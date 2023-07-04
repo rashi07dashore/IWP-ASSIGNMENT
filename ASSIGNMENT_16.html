@@ -1,0 +1,61 @@
+<html>
+
+<head>
+<title>ASSIGNMENT BY RASHI DASHORE</title>
+
+<script type="text/javascript">
+
+function startclock()
+{
+	var thetime=new Date();
+
+	var nhours=thetime.getHours();
+	var nmins=thetime.getMinutes();
+	var nsecn=thetime.getSeconds();
+	var AorP=" ";
+
+	if (nhours>=12)
+   		AorP="P.M.";
+	else
+   		AorP="A.M.";
+
+	if (nhours>=13)
+   		nhours-=12;
+
+	if (nhours==0)
+		nhours=12;
+
+	if (nsecn<10)
+ 		nsecn="0"+nsecn;
+
+	if (nmins<10)
+ 		nmins="0"+nmins;
+
+	document.getElementById('time').innerHTML= nhours+":"+nmins+":"+nsecn+" "+AorP;
+
+	setTimeout("startclock()",1000);
+
+} 
+
+function y()
+{
+	document.write(" DAVV");
+}
+
+</script>
+
+</head>
+
+<body onload="startclock(); ">
+<fieldset style="background-color:rgb(1,202,283)">
+	<legend style="background-Color:rgb(234,283,85);color:purple;border:1px solid black">Current Time is</legend>
+	<div  id="time"></div>
+</fieldset>
+<hr>
+<p>By Rashi Dashore.</p>
+<p> Roll No. : IC-2K20-67 </p>
+Thankyou
+<hr>
+</body>
+
+</html>
